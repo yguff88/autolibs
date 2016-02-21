@@ -73,62 +73,16 @@ nav a:hover{
   padding-top:125px;
 }
 
-.landing_body h1 {
-  font-size:36px;
-}
-
-.landing_copy {
-  line-height:200%;
-}
-
-.landing_copy .subcopy {
+.subcopy {
+  line-height:35px;
   font-size:30px;
+  font-weight:400;
+}
+
+.reachout {
+  font-size:22px;
   font-weight:300;
-}
-
-.landing_images {
-  margin-top:30px;
-  max-width:80%;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-}
-
-.landing_image {
-  float: left;
-  width:33%;
-  padding: 20px 0px 0px 0px;
-}
-
-#landing_image1 {
-  height:50%;
-  width:50%;
-}
-
-#landing_image2 {
-  height:40%;
-  width:40%;
-}
-
-.landing_image h3 {
-  margin-left:50px;
-  margin-right:50px;
-  text-align:center;
-  font-family:"Fira Sans";
-  font-weight:700;
-  color:white;
-}
-
-.landing_image h3:hover{
-  color:#4288D6;
-}
-
-#image1 {
-  margin-left:170px;
-}
-
-#image2 {
-  margin-left:30px;
+  margin-bottom:0px;
 }
 
 /* main body section */
@@ -143,6 +97,20 @@ input {
   border:0px solid #4288D6;
   margin-top:15px;
   padding: 0px 30px 145px 20px;
+  color:#4288D6;
+  font-size:16px;
+  margin-left:250px;
+}
+
+#email {
+  width:400px;
+  height:30px;
+  float:left;
+  background-color:white;
+  border-radius:7px;
+  border:0px solid #4288D6;
+  margin-top:15px;
+  padding: 0px 30px 0px 20px;
   color:#4288D6;
   font-size:16px;
   margin-left:250px;
@@ -163,7 +131,7 @@ input {
 }
 
 #bottom {
-  height:100px;
+  height:300px;
 }
 
 

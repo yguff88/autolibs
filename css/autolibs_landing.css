@@ -39,6 +39,14 @@ body {
   width:6%;
 }
 
+a {
+  color:white;
+}
+
+a:hover {
+  color:#4288D6;
+}
+
 .landing_body {
   width:72%;
   margin-left:auto;
