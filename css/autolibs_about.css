@@ -22,32 +22,55 @@ Developer @GA in NYC
      box-sizing: border-box; /* IE */
 }
 
-/* landing page */
+/* header section */
 
-body {
+body{
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
   background-color:#B9D8FB;
 }
 
-.logo {
-  margin-left:60px;
+#logo { 
+  width:5.5%;
+  margin-left:70px;
   margin-top:0px;
-  padding-top:20px;
+  padding:30px 0px 0px 0px;
+  float:left;
 }
 
-.logo img {
-  height:6%;
-  width:6%;
+nav {
+  margin-right:75px;
+  margin-top:0px;
+  padding-top:40px;
+  float:right;
+}
+
+nav a {
+  font-size:20px;
+  font-family:"Fira Sans";
+  font-weight:700;
+  color:white;
+  float:right;
+  margin-top:0px;
+  text-decoration:none;
+  padding-right:25px;
+  padding-left:15px;
+}
+
+nav a:hover{
+  color:#4288D6;
 }
 
 .landing_body {
-  width:72%;
+  width:70%;
   margin-left:auto;
   margin-right:auto;
   text-align:center;
   font-family:"Fira Sans";
   font-weight:400;
   color:white;
-  padding-top:30px;
+  padding-top:125px;
 }
 
 .landing_body h1 {
@@ -64,7 +87,7 @@ body {
 }
 
 .landing_images {
-  margin-top:70px;
+  margin-top:30px;
   max-width:80%;
   margin-left:auto;
   margin-right:auto;
@@ -73,13 +96,13 @@ body {
 
 .landing_image {
   float: left;
-  width:40%;
-  padding: 10px 0px 0px 0px;
+  width:33%;
+  padding: 20px 0px 0px 0px;
 }
 
 #landing_image1 {
-  height:28%;
-  width:28%;
+  height:50%;
+  width:50%;
 }
 
 #landing_image2 {
@@ -91,14 +114,57 @@ body {
   margin-left:50px;
   margin-right:50px;
   text-align:center;
+  font-family:"Fira Sans";
+  font-weight:700;
+  color:white;
+}
+
+.landing_image h3:hover{
+  color:#4288D6;
 }
 
 #image1 {
-  margin-left:65px;
+  margin-left:170px;
 }
 
 #image2 {
-  margin-right:50px;
+  margin-left:30px;
 }
+
+/* main body section */
+
+
+input {
+  width:400px;
+  height:200px;
+  float:left;
+  background-color:white;
+  border-radius:7px;
+  border:0px solid #4288D6;
+  margin-top:15px;
+  padding: 0px 30px 145px 20px;
+  color:#4288D6;
+  font-size:16px;
+  margin-left:250px;
+}
+
+
+#submitbutton {
+  border-radius:3px;
+  border:2px solid #4288D6;
+  padding: 5px 20px 5px 20px;
+  background-color:#4288D6;
+  color:white;
+  float:left;
+  clear:both;
+  font-size:24px;
+  margin-left:532px;
+  margin-top:10px;
+}
+
+#bottom {
+  height:100px;
+}
+
 
 
