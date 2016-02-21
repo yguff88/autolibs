@@ -22,6 +22,8 @@ Developer @GA in NYC
      box-sizing: border-box; /* IE */
 }
 
+/* header section */
+
 body{
   margin-top:0px;
   margin-left:0px;
@@ -58,6 +60,10 @@ nav a {
   text-decoration:none;
   padding-right:25px;
   padding-left:15px;
+}
+
+nav a:hover{
+  color:#4288D6;
 }
 
 .landing_body {
@@ -117,6 +123,13 @@ nav a {
   margin-left:50px;
   margin-right:50px;
   text-align:center;
+  font-family:"Fira Sans";
+  font-weight:700;
+  color:white;
+}
+
+.landing_image h3:hover{
+  color:#4288D6;
 }
 
 #image1 {
@@ -130,3 +143,68 @@ nav a {
 #image3 {
   margin-left:20px;
 }
+
+/* main body section */
+
+#answers {
+  margin: 0px 0px 0px 0px;
+  background-color:white;
+  height:500px;
+}
+
+#answers h2 {
+  margin-top:0px; 
+  text-align:center;
+  font-family:"Fira Sans";
+  font-weight:700;
+  color:#4288D6;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.question {
+  clear:both;
+}
+
+.question h3 {
+  margin-left:20px;
+  margin-right:20px;
+  float:left;
+  font-family:"Fira Sans";
+  font-weight:300;
+  color:#4288D6;
+  width:300px;
+  margin-bottom:50px;
+}
+
+button {
+  float:left;
+  margin-bottom:20px;
+  background-color:white;
+  border-radius:7px;
+  border:2px solid #4288D6;
+  margin-top:15px;
+  padding: 7px 50px 7px 50px;
+  color:#4288D6;
+  font-size:16px;
+  margin-right:50px;
+}
+
+input {
+  float:left;
+  background-color:white;
+  border-radius:7px;
+  border:2px solid #4288D6;
+  margin-top:15px;
+  padding: 7px 30px 7px 30px;
+  color:#4288D6;
+  font-size:16px;
+  margin-right:50px;
+}
+
+button:hover{
+  background-color:#4288D6;
+  color:white;
+}
+
+

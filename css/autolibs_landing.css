@@ -22,6 +22,8 @@ Developer @GA in NYC
      box-sizing: border-box; /* IE */
 }
 
+/* landing page */
+
 body {
   background-color:#FFC161;
 }
@@ -98,6 +100,5 @@ body {
 #image2 {
   margin-right:50px;
 }
-
 
 
