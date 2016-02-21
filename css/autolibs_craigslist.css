@@ -22,19 +22,42 @@ Developer @GA in NYC
      box-sizing: border-box; /* IE */
 }
 
-body {
-  background-color:#FFC161;
-}
-
-.logo {
-  margin-left:60px;
+body{
   margin-top:0px;
-  padding-top:20px;
+  margin-left:0px;
+  margin-right:0px;
 }
 
-.logo img {
-  height:6%;
-  width:6%;
+.topsection {
+	background-color:#FFC161;
+	height:500px;
+}
+
+#logo { 
+  width:5.5%;
+  margin-left:70px;
+  margin-top:0px;
+  padding:30px 0px 0px 0px;
+  float:left;
+}
+
+nav {
+  margin-right:75px;
+  margin-top:0px;
+  padding-top:40px;
+  float:right;
+}
+
+nav a {
+  font-size:20px;
+  font-family:"Fira Sans";
+  font-weight:700;
+  color:white;
+  float:right;
+  margin-top:0px;
+  text-decoration:none;
+  padding-right:25px;
+  padding-left:15px;
 }
 
 .landing_body {
@@ -45,7 +68,7 @@ body {
   font-family:"Fira Sans";
   font-weight:400;
   color:white;
-  padding-top:30px;
+  padding-top:125px;
 }
 
 .landing_body h1 {
@@ -62,7 +85,7 @@ body {
 }
 
 .landing_images {
-  margin-top:70px;
+  margin-top:30px;
   max-width:80%;
   margin-left:auto;
   margin-right:auto;
@@ -71,16 +94,21 @@ body {
 
 .landing_image {
   float: left;
-  width:40%;
-  padding: 10px 0px 0px 0px;
+  width:25%;
+  padding: 20px 0px 0px 0px;
 }
 
 #landing_image1 {
-  height:28%;
-  width:28%;
+  height:43%;
+  width:43%;
 }
 
 #landing_image2 {
+  height:46%;
+  width:46%;
+}
+
+#landing_image3 {
   height:40%;
   width:40%;
 }
@@ -92,12 +120,13 @@ body {
 }
 
 #image1 {
-  margin-left:65px;
+  margin-left:100px;
 }
 
 #image2 {
-  margin-right:50px;
+  margin-left:30px;
 }
 
-
-
+#image3 {
+  margin-left:20px;
+}
