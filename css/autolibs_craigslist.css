@@ -179,6 +179,11 @@ nav a:hover{
   margin-bottom:50px;
 }
 
+.buttondiv {
+  float:left;
+  width:70%;
+}
+
 button {
   float:left;
   margin-bottom:20px;
