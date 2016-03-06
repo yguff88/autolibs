@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="css/autolibs_craigslist.css" >
 	<title>Autolibs</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 </head>	
 
 <body>
@@ -53,19 +55,19 @@
 
 <div id="answers">
 	<h2>Great! Now just give us a bit more info so we can write a kick-ass post.</h2>
-	<div class="question" id="question1">
+	<div class="question single" id="question1">
 		<h3>What kind of post do you want?</h3>
-		<button>Funny</button>
+		<button>Fun</button>
 		<button>Serious</button>
 		<button>Normal</button>
 	</div>
-	<div class="question" id="question2">
+	<div class="question single" id="question2">
 		<h3>What kind of housing is it?</h3>
 		<button>Apartment</button>
-		<button>Entire Home</button>
+		<button>House</button>
 		<button>Highrise</button>
 	</div>
-	<div class="question" id="question3">
+	<div class="question single" id="question3">
 		<h3>How many bedrooms?</h3>
 		<button>1</button>
 		<button>2</button>
@@ -73,15 +75,27 @@
 		<button>4</button>
 		<button>5</button>
 	</div>
-	<div class="question" id="question4">
+	<div class="question single" id="question4">
 		<h3>What is the monthly rent?</h3>
-		<input type="text" name="rent" placeholder="e.g. $1200">
+		<input id="rent" type="text" name="rent" placeholder="e.g. $1200">
 	</div>
-	<div class="question" id="question5">
+	<div class="question single" id="question5">
+		<h3>What is name of the neighborhood?</h3>
+		<input id="hood" type="text" name="rent" placeholder="e.g. West Village">
+	</div>
+	<div class="question single" id="question6">
+		<h3>What type of neighborhood is it?</h3>
+		<button>Hipster</button>
+		<button>Residential/families</button>
+		<button>Busy/downtown</button>
+		<button>Commercial</button>
+		<button>Suburban</button>
+	</div>
+	<div class="question multi" id="question7">
 		<h3>What is within walking distance? <span style="font-style:italic;">(Select all that apply)</span></h3>
 		<div class="buttondiv">
 		<button>Laundry</button>
-		<button>Bars</button>
+		<button>Bars/Restaurants</button>
 		<button>Groceries</button>
 		<button>Subway</button>
 		<button>Park</button>
@@ -89,13 +103,13 @@
 		<button>Shopping</button>
 		</div>
 	</div>
-	<div class="question" id="question6">
+	<div class="question single" id="question8">
 		<h3>Type of roommate desired?</h3>
 		<button>Social butterfly</button>
 		<button>Keeps to themselves</button>
 		<button>A good mix</button>
 	</div>
-	<div class="question" id="question7">
+	<div class="question multi" id="question9">
 		<h3>My current roommates are: <br><span style="font-style:italic;">(Select all that apply)</span><br></h3>
 		<button>20s</button>
 		<button>30s</button>
@@ -105,7 +119,7 @@
 		<button>Quiet</button>
 		<button>Social</button>
 	</div>
-	<div class="question" id="question8">
+	<div class="question multi" id="question10">
 		<h3>Things that are okay...<br><span style="font-style:italic;">(Select all that apply)</span><br></h3>
 		<button>Dogs</button>
 		<button>Cats</button>
@@ -113,7 +127,7 @@
 		<button>Smokers</button>
 		<button>420</button>
 	</div>
-	<div class="question" id="question9">
+	<div class="question multi" id="question11">
 		<h3>Things that are NOT okay...<br><span style="font-style:italic;">(Select all that apply)</span><br></h3>
 		<button>Dogs</button>
 		<button>Cats</button>
@@ -122,15 +136,15 @@
 		<button>Drugs</button>
 		<button>Children</button>
 	</div>
-	<div class="question" id="question10">
+	<div class="question single" id="question12">
 		<h3>When does the lease end?</h3>
 		<input type="text" name="rent" placeholder="e.g. Jan 1, 2017">
 	</div>
-	<div class="question" id="question11">
+	<div class="question" id="question13">
 		<button id="generatebutton">Write my post!</button>
 	</div>
 </div>
-
+<script src="js/craigslist.js"></script>
 </body>
 
 </html>
