@@ -47,6 +47,10 @@ $('#answers #question3 button').on('click',function(){
 	answer_3 = $(this).text();
 });
 
+$('#submit1').submit(function(){
+event.preventDefault();
+answer_4 = $('#rent').val();
+});
 
 if (question_1 === "Fun") {
 		answer_2to5 = "The room is in a wonderful " + answer_2 + " in the heart of" + answer_5 + ". You'll be sharing it with" + answer_3 + " other roommates, who are all awesome, like you (hopefully)! Total rent for the room is a cool" + answer_4 + " per month, which is honestly kind of a steal for a neighborhood/building this sweet.";
@@ -57,6 +61,6 @@ if (question_1 === "Fun") {
 	};
 
 $('#generatebutton').on('click',function(){
-console.log(answer_1);
+console.log(answer_4);
 });
 
