@@ -179,11 +179,6 @@ nav a:hover{
   margin-bottom:50px;
 }
 
-.buttondiv {
-  float:left;
-  width:70%;
-}
-
 button {
   float:left;
   margin-bottom:20px;
@@ -227,5 +222,68 @@ button:hover{
   margin-bottom:50px;
 }
 
+.answer {
+  width:75%;
+  margin-left:150px;
+  clear:both;
+  margin-top:50px;
+  font-family:"Fira Sans";
+  font-weight:300;
+  color:#4288D6;
+  font-size:18px;
+}
 
+.three {
+  width:70%;
+  float:right;
+}
+.three button {
+  width:25%;
+}
+
+.five {
+  width:70%;
+  float:right;
+}
+.five button {
+  width:12%;
+}
+
+.five2 {
+  width:70%;
+  float:right;
+}
+.five2 button {
+  width:25%;
+}
+
+.formq {
+  width:70%;
+  float:right;
+}
+
+.buttondiv {
+  float:right;
+  width:70%;
+}
+
+.buttondiv button {
+  width:25%;
+}
+
+.five3 {
+  width:70%;
+  float:right;
+}
+.five3 button {
+  width:25%;
+}
+
+.six {
+  width:70%;
+  float:right;
+}
+.six button {
+  width:25%;
+}
 
