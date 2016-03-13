@@ -36,9 +36,10 @@ var answer_6;
 var answer_5to6;
 var answer_5to6followup;
 var multiAnswers;
-var answer_7;
+var answer_7 = "";
 var answer_7array = [];
-var answer_7followup = function(){};
+var answer_8;
+var answer_8followup;
 /* JSON */
 
 var multiAnswers = {
@@ -211,6 +212,50 @@ var multiAnswers = {
         "description":"Finally, tons of great places to shop nearby!"
       }
     }
+  },
+  "question8": {
+    "Fun":{
+      "Social butterfly": {
+        "type":"Social butterfly",
+        "description":"Ideally you are a pretty social person who works hard but also likes to have a good time. I'd say a perfect fit would be someone who likes to keep their door open and go out most weekend nights, but can appreciate a good Netflix and Chill as well. Totally fine if you want to have friends over from time to time."
+      },
+      "Keeps to themselves": {
+        "type":"Keeps to themselves",
+        "description":"We're looking for someone who's pretty quiet, respectful, and generally likes to keep the apartment as calm as possible. No ragers at home (totally fine if you like to rage outside!)."
+      },
+      "A good mix": {
+        "type":"A good mix",
+        "description":"We're not looking for someone who's a manic social butterfly (Manic Social Butterfly - term copyrighted by me) or for someone who's a total shut-in and/or debbie-downer. Hopefully you like making new friends, love to hang and destress after a long day, and are an all-a round delight of a person!"
+      }
+    },
+    "Serious":{
+      "Social butterfly": {
+        "type":"Social butterfly",
+        "description":"A social butterfly. The roommates want someone social, fun, outgoing, and ready to party!"
+      },
+      "Keeps to themselves": {
+        "type":"Keeps to themselves",
+        "description":"A quiet presence. The roommates want someone, like them, who is quiet, respectful, and keeps the party outside of the apartment."
+      },
+      "A good mix": {
+        "type":"A good mix",
+        "description":"A fun presence in the apartment. You like to chat/hang/drink/party but also know when to chill."
+      }
+    },
+    "Normal":{
+      "Social butterfly": {
+        "type":"Social butterfly",
+        "description":"Ideally, you are energetic and always ready to party! The roommates love to go wild from time to time, so if you can hang with them, then that'd be amazing!"
+      },
+      "Keeps to themselves": {
+        "type":"Keeps to themselves",
+        "description":"Ideally, you are a quiet person. Someone who works outside of the apartment, and their idea of a wild night is Netflix + a glass of Chardonnay."
+      },
+      "A good mix": {
+        "type":"A good mix",
+        "description":"Ideally, you are a fun presence in the apartment. You have a good number of friends and know that just because it's friday, doesn't mean you have to go rage - a night of hanging in and playing Arrested Development drinking games is just as fun."
+      }
+    },
   }
 }
 
@@ -234,8 +279,21 @@ $('#answers #question7 button').on('click',function(){
 	answer_7array.push($(this).text());
 	console.log(answer_7array);
 	});
-	
 
+$('#answers #question8 button').on('click',function(){
+	answer_8 = $(this).text();
+	console.log(answer_8);
+	answer_8followup = (multiAnswers['question8'][question_1][answer_8]['description']);
+	console.log(answer_8followup);
+});
+	
+function answer_7followup(){
+  answer_7 = "";
+  for (var i = 0; i<answer_7array.length; i++){
+    answer_7 = answer_7 + ' ' + multiAnswers['question7'][question_1][answer_7array[i]]['description'];
+  }
+  return answer_7;
+};
 
 $('#generatebutton').on('click',function(){
 	if (question_1 === "Fun") {
@@ -276,13 +334,7 @@ $('#generatebutton').on('click',function(){
 		answer_7 = "I love this neighborhood and you will too. You may never want to leave once you move in! ";
 	}
 
-	answer_7followup = function(){
-		for (var i = 0; i<answer_7array.length; i++){
-			(multiAnswers['question7'][question_1][answer_7array[i]]['description']);
-		}
-	};
-
-	$('.answer').html(answer_1 + "<br>" + "<br>" + answer_2to5 + "<br>" + "<br>" + answer_5to6 + " " + answer_5to6followup + "<br>" + "<br>" + answer_7followup);
+	$('.answer').html(answer_1 + "<br>" + "<br>" + answer_2to5 + "<br>" + "<br>" + answer_5to6 + " " + answer_5to6followup + "<br>" + "<br>" + answer_7followup() + "<br>" + "<br>" + "We're looking for someone who is a good match for the current roommates.");
 
 });
 
