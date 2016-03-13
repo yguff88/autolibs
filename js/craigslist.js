@@ -36,21 +36,9 @@ var answer_6;
 var answer_5to6;
 var answer_5to6followup;
 var multiAnswers;
-
-$('#answers #question2 button').on('click',function(){
-	answer_2 = $(this).text();
-	console.log(answer_2);
-});
-
-$('#answers #question3 button').on('click',function(){
-	answer_3 = $(this).text();
-});
-
-$('#answers #question6 button').on('click',function(){
-	answer_6 = $(this).text();
-	console.log(multiAnswers['question6'][question_1][answer_6]);
-});
-
+var answer_7;
+var answer_7array = [];
+var answer_7followup = function(){};
 /* JSON */
 
 var multiAnswers = {
@@ -74,55 +62,180 @@ var multiAnswers = {
         "type":"Families",
         "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
       },
+      "Downtown": {
+        "type":"Downtown",
+        "description":"You're in a pretty busy part of the city, so this is definitely for folks who like hustle and bustle and don't mind sirens late at night. ;-) But don't worry, our walls are super thick."
+      },
       "Commercial": {
         "type":"Commercial",
-        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+        "description":"Since it's a business area, that means not a ton of restaurants opened nearby on weekends, but also not a lot of people on weekends, so it's a great escape from the madness of downtown."
       },
-      "Surburban": {
+      "Suburban": {
         "type":"Suburban",
-        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+        "description":"You're a decent distance from downtown, which is great if you like the quiet, and things are also a bit cheaper so that's awesome!"
       }
     },
     "Serious":{
       "Hipster": {
         "type":"Hipster",
-        "description":"If you're young, the hipster vibe should be perfect. Obviously a lot of handlebar mustaches everywhere but you also get the perks of hipsterdom, like craft beer, young attractive folks everywhere, and great restaurants opening every day."
+        "description":"I honestly don't love hipsters, but the food and drinks around here are amazing as a result, so that's cool"
       },
       "Families": {
         "type":"Families",
-        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+        "description":"But this area is definitely very residential so expect lots of families."
+      },
+      "Downtown": {
+        "type":"Downtown",
+        "description":"There are lots of noises late at night, people screaming, ambulances, etc. But obviously that also means you've got an amazing number of shopping opportunities nearby, and the apartment blocks sound very well."
       },
       "Commercial": {
         "type":"Commercial",
-        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+        "description":"Lots of banks nearby as well, so expect a sea of people in suits on your daily commute."
       },
-      "Surburban": {
+      "Suburban": {
         "type":"Suburban",
-        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+        "description":"The neighborhood is super quiet and truly has a suburban feel which is great."
       }
     },
     "Normal":{
       "Hipster": {
         "type":"Hipster",
-        "description":"If you're young, the hipster vibe should be perfect. Obviously a lot of handlebar mustaches everywhere but you also get the perks of hipsterdom, like craft beer, young attractive folks everywhere, and great restaurants opening every day."
+        "description":"To be honest, I kind of love the hipster feel because everything looks so damn pretty and tastes so good."
       },
       "Families": {
         "type":"Families",
-        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+        "description":"Lots of families. Lots of strollers. Lots of uncrowded bars. Overall, awesome."
+      },
+      "Downtown": {
+        "type":"Downtown",
+        "description":"You're in the center of a lot of action, so be ready for some noise, but the apartment blocks sound very well so don't worry too much. You know what you're getting when you live in this area."
       },
       "Commercial": {
         "type":"Commercial",
-        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+        "description":"Not a ton of energy on the weekends, but maybe you like that! I sure do."
       },
-      "Surburban": {
+      "Suburban": {
         "type":"Suburban",
-        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+        "description":"You get all the benefits of living in the city, but with a nice quiet place to go home to after a long day."
+      }
+    }
+  },
+  "question7": {
+    "Fun":{
+      "Laundry": {
+        "type":"Laundry",
+        "description":"There's amazing laundry spots within a few blocks (hint: they fold everything for you!)"
+      },
+      "Bars/Restaurants": {
+        "type":"Bars/Restaurants",
+        "description":"And the bars - don't get me started on the bars. So many amazing bars within walking distance, so you can stumble home after a late night of fun."
+      },
+      "Groceries": {
+        "type":"Groceries",
+        "description":"You'll never go hungry because there are tons of amazing grocery stores just around the corner. From organic abodes to kale-free zones."
+      },
+      "Subway": {
+        "type":"Subway",
+        "description":"The subway is also super close and the commute to other areas of the city is a breeze."
+      },
+      "Park": {
+        "type":"Park",
+        "description":"If you like running or just being near nature, the park is super close too. Just don't go in after dark or the park goblins will eat you."
+      },
+      "Coffeeshops": {
+        "type":"Coffeeshops",
+        "description":"The morning caffeine stations are super close, and the coffee is great at most of them. Also, recommend you work on a screenplay if you're going to sit inside of one, or else you'll be kicked out."
+      },
+      "Shopping": {
+        "type":"Shopping",
+        "description":"There are also a good number of shops nearby, so you can buy clothes/trinkets/hats/whatever you enjoy! Even Beanie Babies! (just kidding)."
+      }
+    },
+    "Serious":{
+      "Laundry": {
+        "type":"Laundry",
+        "description":"Laundry is very close and super cheap."
+      },
+      "Bars/Restaurants": {
+        "type":"Bars/Restaurants",
+        "description":"A good number of bars as well, if you're into that."
+      },
+      "Groceries": {
+        "type":"Groceries",
+        "description":"There are a few good grocery stores as well, for your cooking needs."
+      },
+      "Subway": {
+        "type":"Subway",
+        "description":"The subway is close as well."
+      },
+      "Park": {
+        "type":"Park",
+        "description":" Also, there's a nice park nearby that is beautiful during the summer."
+      },
+      "Coffeeshops": {
+        "type":"Coffeeshops",
+        "description":"The area also has a good number of coffeeshops."
+      },
+      "Shopping": {
+        "type":"Shopping",
+        "description":"Finally, a nice amount of shopping choices nearby."
+      }
+    },
+    "Normal":{
+      "Laundry": {
+        "type":"Laundry",
+        "description":"Laundry is nearby and there are many options for self-service or full-service."
+      },
+      "Bars/Restaurants": {
+        "type":"Bars/Restaurants",
+        "description":"There are some great bars nearby that make drinking very easy (too easy?)."
+      },
+      "Groceries": {
+        "type":"Groceries",
+        "description":"Although I don't cook a lot, there are a lot of grocery stores for the times when you don't want to order delivery."
+      },
+      "Subway": {
+        "type":"Subway",
+        "description":"The subway is really close and makes getting to and from the city a breeze."
+      },
+      "Park": {
+        "type":"Park",
+        "description":"The park is great for picnics, running, etc."
+      },
+      "Coffeeshops": {
+        "type":"Coffeeshops",
+        "description":"I love coffee and this area does not leave me wanting."
+      },
+      "Shopping": {
+        "type":"Shopping",
+        "description":"Finally, tons of great places to shop nearby!"
       }
     }
   }
 }
 
 /* end JSON */
+
+$('#answers #question2 button').on('click',function(){
+	answer_2 = $(this).text();
+	console.log(answer_2);
+});
+
+$('#answers #question3 button').on('click',function(){
+	answer_3 = $(this).text();
+});
+
+$('#answers #question6 button').on('click',function(){
+	answer_6 = $(this).text();
+	answer_5to6followup = (multiAnswers['question6'][question_1][answer_6]['description']);
+});
+
+$('#answers #question7 button').on('click',function(){
+	answer_7array.push($(this).text());
+	console.log(answer_7array);
+	});
+	
+
 
 $('#generatebutton').on('click',function(){
 	if (question_1 === "Fun") {
@@ -155,7 +268,21 @@ $('#generatebutton').on('click',function(){
 		answer_5to6 = "If you don't know a lot about " + answer_5 + ", I'd probably describe it as a very " + answer_6 + " area, so if a " + answer_6 + " area seems like your cup of tea, it should be perfect.";
 	}
 
-	$('.answer').html(answer_1 + "<br>" + "<br>" + answer_2to5 + "<br>" + "<br>" + answer_5to6 + "<br>" + answer_5to6followup);
+	if (question_1 === "Fun") {
+		answer_7 = "There's tons of stuff nearby, which makes this apartment even harder to leave! In the event of a zombie apocalypse, I think you could survive on the stores within 50 feet of the building. ";
+	} else if (question_1 === "Serious"){
+		answer_7 =  "The neighborhood also has many options for spending money. A few of the things that you'll find in the area... ";
+	} else if (question_1 ==="Normal"){
+		answer_7 = "I love this neighborhood and you will too. You may never want to leave once you move in! ";
+	}
+
+	answer_7followup = function(){
+		for (var i = 0; i<answer_7array.length; i++){
+			(multiAnswers['question7'][question_1][answer_7array[i]]['description']);
+		}
+	};
+
+	$('.answer').html(answer_1 + "<br>" + "<br>" + answer_2to5 + "<br>" + "<br>" + answer_5to6 + " " + answer_5to6followup + "<br>" + "<br>" + answer_7followup);
 
 });
 
