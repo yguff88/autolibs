@@ -35,29 +35,7 @@ var answer_5;
 var answer_6;	
 var answer_5to6;
 var answer_5to6followup;
-/*{"typeofhoodFun":[
-	{"type":"Hipster", "description":"If you're young, the hipster vibe should be perfect. Obviously a lot of handlebar mustaches everywhere but you also get the perks of hipsterdom, like craft beer, young attractive folks everywhere, and great restaurants opening every day."},
-	{"type":"Residential", "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."},
-	{"type":"Busy", "description":"You're in a pretty busy part of the city, so this is definitely for folks who like hustle and bustle and don't mind sirens late at night. ;-) But don't worry, our walls are super thick."},
-	{"type":"Commercial", "description":"Since it's a business area, that means not a ton of restaurants opened nearby on weekends, but also not a lot of people on weekends, so it's a great escape from the madness of downtown."},
-	{"type":"Suburban", "description":" You're a decent distance from downtown, which is great if you like the quiet, and things are also a bit cheaper so that's awesome!"}
-]};
-
-{"typeofhoodSerious":[
-	{"type":"Hipster", "description":"I honestly don't love hipsters, but the food and drinks around here are amazing as a result, so that's cool."},
-	{"type":"Residential", "description":"But this area is definitely very residential so expect lots of families."},
-	{"type":"Busy", "description":"There are lots of noises late at night, people screaming, ambulances, etc. But obviously that also means you've got an amazing number of shopping opportunities nearby, and the apartment blocks sound very well."},
-	{"type":"Commercial", "description":"Lots of banks nearby as well, so expect a sea of people in suits on your daily commute."},
-	{"type":"Suburban", "description":"The neighborhood is super quiet and truly has a suburban feel which is great."}
-]};
-
-{"typeofhoodNormal":[
-	{"type":"Hipster", "description":"To be honest, I kind of love the hipster feel because everything looks so damn pretty and tastes so good."},
-	{"type":"Residential", "description":"Lots of families. Lots of strollers. Lots of uncrowded bars. Overall, awesome."},
-	{"type":"Busy", "description":"You're in the center of a lot of action, so be ready for some noise, but the apartment blocks sound very well so don't worry too much. You know what you're getting when you live in this area."},
-	{"type":"Commercial", "description":"Not a ton of energy on the weekends, but maybe you like that! I sure do."},
-	{"type":"Suburban", "description":"You get all the benefits of living in the city, but with a nice quiet place to go home to after a long day."}
-]}; */
+var multiAnswers;
 
 $('#answers #question2 button').on('click',function(){
 	answer_2 = $(this).text();
@@ -70,15 +48,81 @@ $('#answers #question3 button').on('click',function(){
 
 $('#answers #question6 button').on('click',function(){
 	answer_6 = $(this).text();
+	console.log(multiAnswers['question6'][question_1][answer_6]);
 });
 
-/*if (question_1 === "Fun"){
-	for(var i = 0; i < typeofhoodFun.length; i++)
-{if(typeofhoodFun[i].typeofhoodFun.type === answer_6)
-  {answer_5to6followup = typeofhoodFun[i].typeofhoodFun.description;
-  };
-};
-} */
+/* JSON */
+
+var multiAnswers = {
+  "question1": {
+    "fun": "Sentence about fun",
+    "serious": "Sentence about serious",
+    "normal": "Sentence about normal"
+  },
+  "question2": {
+    "apartment": "Sentence about apartment",
+    "house": "Sentence about house",
+    "highrise": "Sentence about highrise"
+  },
+  "question6": {
+    "Fun":{
+      "Hipster": {
+        "type":"Hipster",
+        "description":"If you're young, the hipster vibe should be perfect. Obviously a lot of handlebar mustaches everywhere but you also get the perks of hipsterdom, like craft beer, young attractive folks everywhere, and great restaurants opening every day."
+      },
+      "Families": {
+        "type":"Families",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      },
+      "Commercial": {
+        "type":"Commercial",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      },
+      "Surburban": {
+        "type":"Suburban",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      }
+    },
+    "Serious":{
+      "Hipster": {
+        "type":"Hipster",
+        "description":"If you're young, the hipster vibe should be perfect. Obviously a lot of handlebar mustaches everywhere but you also get the perks of hipsterdom, like craft beer, young attractive folks everywhere, and great restaurants opening every day."
+      },
+      "Families": {
+        "type":"Families",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      },
+      "Commercial": {
+        "type":"Commercial",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      },
+      "Surburban": {
+        "type":"Suburban",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      }
+    },
+    "Normal":{
+      "Hipster": {
+        "type":"Hipster",
+        "description":"If you're young, the hipster vibe should be perfect. Obviously a lot of handlebar mustaches everywhere but you also get the perks of hipsterdom, like craft beer, young attractive folks everywhere, and great restaurants opening every day."
+      },
+      "Families": {
+        "type":"Families",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      },
+      "Commercial": {
+        "type":"Commercial",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      },
+      "Surburban": {
+        "type":"Suburban",
+        "description":"Definitely a ton of families and not quite as many shops as other nearby areas, but if you like the quiet after coming home from work, you'll love it."
+      }
+    }
+  }
+}
+
+/* end JSON */
 
 $('#generatebutton').on('click',function(){
 	if (question_1 === "Fun") {
