@@ -2,6 +2,7 @@ $('#answers').hide();
 
 $('.image1 img').on('click',function(){
 	$('#answers').slideDown();
+	$('html, body').animate({scrollTop: '+=500px'}, 800);
 });
 
 $('#answers button').on('click',function(){
@@ -40,6 +41,16 @@ var answer_7 = "";
 var answer_7array = [];
 var answer_8;
 var answer_8followup;
+var answer_9 = "";
+var answer_9array = [];
+var answer_10intro;
+var answer_10 = "";
+var answer_10array = [];
+var answer_11 = "";
+var answer_11array = [];
+var answer_12;
+var answer_12followup;
+var ending_greeting;
 /* JSON */
 
 var multiAnswers = {
@@ -255,6 +266,210 @@ var multiAnswers = {
         "type":"A good mix",
         "description":"Ideally, you are a fun presence in the apartment. You have a good number of friends and know that just because it's friday, doesn't mean you have to go rage - a night of hanging in and playing Arrested Development drinking games is just as fun."
       }
+    }
+  },
+  "question9": {
+    "Fun":{
+      "20s": {
+        "type":"20s",
+        "description":"They are in their 20s and have a good group of friends in the city (mostly from college)."
+      },
+      "30s": {
+        "type":"30s",
+        "description":"They are in their 30s and therefore a bit more settled than a couple of wild college kids. Ideally, you're in your 30s as well - no frat bros here!"
+      },
+      "Creatives": {
+        "type":"Creatives",
+        "description":"They work in creative fields and it's not too weird to see crazy art flowing in and out of the apartment on a weekly basis."
+      },
+       "Professionals": {
+        "type":"Professionals",
+        "description":"They work as business professionals and most of their friends do too. Suits rule!"
+      }
+    },
+    "Serious":{
+      "20s": {
+        "type":"20s",
+        "description":"They are in their 20s and would like someone who is the same."
+      },
+      "30s": {
+        "type":"30s",
+        "description":"They are in their 30s and would like someone who is the same."
+      },
+      "Creatives": {
+        "type":"Creatives",
+        "description":"They work in creative fields so someone very creative would be great."
+      },
+       "Professionals": {
+        "type":"Professionals",
+        "description":"They work as business professionals and have pretty crazy hours, so don't be surprised if you don't see them during the week a lot."
+      }
+    },
+    "Normal":{
+      "20s": {
+        "type":"20s",
+        "description":"They are in their 20s and would love for you to be too! Everyone has busy lives but likes to hang together when the situation calls for it."
+      },
+      "30s": {
+        "type":"30s",
+        "description":"They are in their 30s and would like someone who is the same - settled, sure of themself, and able to have some good deep conversations about life/marriage/passion from time to time."
+      },
+      "Creatives": {
+        "type":"Creatives",
+        "description":"They work in creative fields so someone very creative would be great. Ideal candidate would be an art director at a design agency ;-)"
+      },
+       "Professionals": {
+        "type":"Professionals",
+        "description":"They work as business professionals and have pretty crazy hours, since they're very focused on their careers right now."
+      }
+    }
+  },
+  "question10": {
+    "Fun":{
+      "Dogs": {
+        "type":"Dogs",
+        "description":"Dogs are okay as long as they're not massive and/or shed a ton."
+      },
+      "Cats": {
+        "type":"Cats",
+        "description":"Cats are okay as long as they don't shed a ton and pee errywhere!"
+      },
+      "Couples": {
+        "type":"Couples",
+        "description":"We are open to chatting with couples about the room, so long as you don't fight all the time ;-) And can cook really well, and provide relationship advice upon request."
+      },
+       "Smokers": {
+        "type":"Smokers",
+        "description":"Smokers are okay so long as you never smoke in the apartment."
+      },
+       "420": {
+        "type":"420",
+        "description":"And we are, of course, 420 friendly (that can happen in the apartment)."
+      }
+    },
+    "Serious":{
+      "Dogs": {
+        "type":"Dogs",
+        "description":"Dogs are okay if they spend most of their time in your room, unless agreed upon by the roommates."
+      },
+      "Cats": {
+        "type":"Cats",
+        "description":"Cats are okay if they spend most of their time in your room and don't shed."
+      },
+      "Couples": {
+        "type":"Couples",
+        "description":"We are open to couples as well, as long as the pair pays their share of utilities for two people."
+      },
+       "Smokers": {
+        "type":"Smokers",
+        "description":"The roommates are okay if you smoke, but obviously only outside."
+      },
+       "420": {
+        "type":"420",
+        "description":"420 is okay too."
+      }
+    },
+    "Normal":{
+      "Dogs": {
+        "type":"Dogs",
+        "description":"Dogs are okay as long as they are cute and not rabid."
+      },
+      "Cats": {
+        "type":"Cats",
+        "description":"Cats are okay as long as they are super cute."
+      },
+      "Couples": {
+        "type":"Couples",
+        "description":"Cool couples can apply as well, but will be held to higher coolness standards."
+      },
+       "Smokers": {
+        "type":"Smokers",
+        "description":"The roommates are okay if you smoke, but obviously only outside. However, we'd recommend you quit because smoking is bad for you."
+      },
+       "420": {
+        "type":"420",
+        "description":"420 is okay, if you share. ;-)"
+      }
+    },
+  },
+  "question11": {
+    "Fun":{
+      "Dogs": {
+        "type":"Dogs",
+        "description":"Unfortunately no dogs (but pets are okay if it can live in a small glass cage in your room. i.e. tarantulas)."
+      },
+      "Cats": {
+        "type":"Cats",
+        "description":"Cats are unfortunately not allowed"
+      },
+      "Couples": {
+        "type":"Couples",
+        "description":"No couples! We love couples, but don't want to deal with coupley nonsense. Too risky!"
+      },
+       "Smokers": {
+        "type":"Smokers",
+        "description":"NO smokers. Sorry!"
+      },
+       "Drugs": {
+        "type":"Drugs",
+        "description":"No hard drugs (except for the really light stuff. See above)."
+      },
+       "Children": {
+        "type":"Children",
+        "description":"Children are cool, but this abode is no place for a child :-D"
+      }
+    },
+    "Serious":{
+      "Dogs": {
+        "type":"Dogs",
+        "description":"No dogs at all."
+      },
+      "Cats": {
+        "type":"Cats",
+        "description":"No cats allowed."
+      },
+      "Couples": {
+        "type":"Couples",
+        "description":"No couples!"
+      },
+       "Smokers": {
+        "type":"Smokers",
+        "description":"NO smokers."
+      },
+       "Drugs": {
+        "type":"Drugs",
+        "description":"No hard drugs in the house, obviously."
+      },
+       "Children": {
+        "type":"Children",
+        "description":"No kids."
+      }
+    },
+    "Normal":{
+      "Dogs": {
+        "type":"Dogs",
+        "description":"No dogs unless they're the size of a teacup, literally."
+      },
+      "Cats": {
+        "type":"Cats",
+        "description":"Cats are unfortunately not allowed in our casa."
+      },
+      "Couples": {
+        "type":"Couples",
+        "description":"Couples need not apply."
+      },
+       "Smokers": {
+        "type":"Smokers",
+        "description":"No smoking (there's like 10 smoke alarms in this apartment!)."
+      },
+       "Drugs": {
+        "type":"Drugs",
+        "description":"No hard drugs in the house, obviously."
+      },
+       "Children": {
+        "type":"Children",
+        "description":"No kids either."
+      }
     },
   }
 }
@@ -295,7 +510,50 @@ function answer_7followup(){
   return answer_7;
 };
 
+$('#answers #question9 button').on('click',function(){
+	answer_9array.push($(this).text());
+	console.log(answer_9array);
+	});
+
+function answer_9followup(){
+  answer_9 = "";
+  for (var i = 0; i<answer_9array.length; i++){
+    answer_9 = answer_9 + ' ' + multiAnswers['question9'][question_1][answer_9array[i]]['description'];
+  }
+  return answer_9;
+};
+
+$('#answers #question10 button').on('click',function(){
+	answer_10array.push($(this).text());
+	console.log(answer_10array);
+	});
+
+function answer_10followup(){
+  answer_10 = "";
+  for (var i = 0; i<answer_10array.length; i++){
+    answer_10 = answer_10 + ' ' + multiAnswers['question10'][question_1][answer_10array[i]]['description'];
+  }
+  return answer_10;
+};
+
+$('#answers #question11 button').on('click',function(){
+	answer_11array.push($(this).text());
+	console.log(answer_11array);
+	});
+
+function answer_11followup(){
+  answer_11 = "";
+  for (var i = 0; i<answer_11array.length; i++){
+    answer_11 = answer_11 + ' ' + multiAnswers['question11'][question_1][answer_11array[i]]['description'];
+  }
+  return answer_11;
+};
+
 $('#generatebutton').on('click',function(){
+	$('html, body').animate({
+    scrollTop: $(window).scrollTop() + 550
+	});
+
 	if (question_1 === "Fun") {
 		random_1 = random1Fun[Math.floor(Math.random()*random1Fun.length)];
 		var answer_1 ="Hello Craigslisters! Much to my dismay, I am moving out of my wonderful home for a new adventure. I'll be subletting it for the remainder of the lease and am looking for someone awesome to take my place." + random_1 + "Here's a bit more about the space:";
@@ -309,6 +567,7 @@ $('#generatebutton').on('click',function(){
 
 	answer_4 = $('#rent').val();
 	answer_5 = $('#hood').val();
+	answer_12 = $('#lease').val();
 
 	if (question_1 === "Fun") {
 			answer_2to5 = "The room is in a wonderful " + answer_2 + " in the heart of " + answer_5 + ". You'll be sharing it with " + answer_3 + " other roommates, who are all awesome, like you (hopefully)! Total rent for the room is a cool " + answer_4 + " per month, which is honestly kind of a steal for a neighborhood/building this sweet.";
@@ -334,7 +593,31 @@ $('#generatebutton').on('click',function(){
 		answer_7 = "I love this neighborhood and you will too. You may never want to leave once you move in! ";
 	}
 
-	$('.answer').html(answer_1 + "<br>" + "<br>" + answer_2to5 + "<br>" + "<br>" + answer_5to6 + " " + answer_5to6followup + "<br>" + "<br>" + answer_7followup() + "<br>" + "<br>" + "We're looking for someone who is a good match for the current roommates.");
+	if (question_1 === "Fun") {
+		answer_10intro = "The apartment is pretty loose with some things, and so these things are okay but we'd want heads up: ";
+	} else if (question_1 === "Serious"){
+		answer_10intro =  "The roommates are okay with the following: ";
+	} else if (question_1 ==="Normal"){
+		answer_10intro = "We're okay with the following, so long as you're cool about it: ";
+	}
+
+	if (question_1 === "Fun") {
+		answer_12followup = "Finally, you'll obviously want to know about the length of the sublet. The lease ends on " + answer_12 + " and after that you can talk with the roommates about extending the lease under your name. Yay!!! Dang, I'm jealous you get to live here and I don't  :-(";
+	} else if (question_1 === "Serious"){
+		answer_10intro =  "Finally, the lease ends on " + answer_12 + " and after that you can talk with the roommates about extending the lease under your name. ";
+	} else if (question_1 ==="Normal"){
+		answer_10intro = "Finally, the lease ends on " + answer_12 + " and after that you can talk with the roommates about extending the lease under your name. Not sure if they're staying yet, but you can definitely talk to them about it!";
+	}
+
+	if (question_1 === "Fun") {
+		ending_greeting = "Thanks for reading! If you're still interested please shoot me an email with some info about you, scan of social security card, etc. and we'll be in touch soon!";
+	} else if (question_1 === "Serious"){
+		ending_greeting =  "If you're interested, please send me an email with some info about yourself (job, income, current situation, etc.) and I'll be in touch if it sounds like a good fit.";
+	} else if (question_1 ==="Normal"){
+		ending_greeting = "Please shoot me an email if you're interested and we'll get back to you soon if it sounds like a good fit. Looking for housing sucks so let's make this as painless as possible!";
+	}
+
+	$('.answer').html(answer_1 + "<br>" + "<br>" + answer_2to5 + "<br>" + "<br>" + answer_5to6 + " " + answer_5to6followup + "<br>" + "<br>" + answer_7followup() + "<br>" + "We're looking for someone who is a good match for the current roommates." + answer_8followup + "<br>" + "<br>" + "A bit more info about the current roommates... " + answer_9followup() + "<br>" + "<br>" + answer_10intro + answer_10followup() + "<br>" + "<br>" + "A few things that we are NOT okay with are:" + answer_11followup() + "<br>" + "<br>" + answer_12followup + "<br>" + "<br>" + ending_greeting);
 
 });
 
