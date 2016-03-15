@@ -3,6 +3,7 @@ $('#answers').hide();
 $('.image1 img').on('click',function(){
 	$('#answers').slideDown();
 	$('html, body').animate({scrollTop: '+=500px'}, 800);
+  $('.topsection').animate({height:'500'});
 });
 
 $('#answers button').on('click',function(){
@@ -550,7 +551,8 @@ function answer_11followup(){
 };
 
 $('#generatebutton').on('click',function(){
-	$('html, body').animate({
+
+  $('html, body').animate({
     scrollTop: $(window).scrollTop() + 550
 	});
 

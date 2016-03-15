@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">	
 	<link rel="stylesheet" type="text/css" href="css/autolibs_emails.css" >
 	<title>Autolibs</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>	
 
 <body>
@@ -50,17 +51,34 @@
 
 <div id="answers">
 	<h2>Great! Now just give us a bit more info so we can write a kick-ass email.</h2>
-	<div class="question" id="question1">
-		<h3>What vertical is this?</h3>
-		<button>Photography</button>
-		<button>Design</button>
-		<button>Music</button>
-		<button>Tech</button>
-		<button>Commerce</button>
-		<button>Generic</button>
+	
+	<div class="question single" id="question1">
+		<h3>What tone should it be?</h3>
+		<div class="two">
+		<button>Serious</button>
+		<button>Passionate</button>
+		</div>
 	</div>
-	<div class="question" id="question2">
+
+	<div class="question single" id="question2">
+		<h3>What is your name?</h3>
+		<div class="formq">
+		<form><input id="name" type="text" name="name" placeholder="e.g. Derek">
+		</form>
+		</div>
+	</div>
+
+	<div class="question single" id="question3">
+		<h3>What is their company's name?</h3>
+		<div class="formq">
+		<form><input id="company" type="text" name="company" placeholder="e.g. Spotify">
+		</form>
+		</div>
+	</div>
+	
+	<div class="question single" id="question4">
 		<h3>What channel is it?</h3>
+		<div class="seven">
 		<button>Podcast</button>
 		<button>Magazine</button>
 		<button>Website</button>
@@ -68,36 +86,46 @@
 		<button>Video</button>
 		<button>Outdoor</button>
 		<button>Audio</button>
+		</div>
 	</div>
-	<div class="question" id="question3">
-		<h3>My name?</h3>
-		<input type="text" name="rent" placeholder="e.g. Derek">
+
+	<div class="question single" id="question5">
+		<h3>What vertical is this?</h3>
+		<div class="six">
+		<button>Photography</button>
+		<button>Design</button>
+		<button>Music</button>
+		<button>Tech</button>
+		<button>Commerce</button>
+		<button>Generic</button>
+		</div>
 	</div>
-	<div class="question" id="question4">
-		<h3>Their company's name?</h3>
-		<input type="text" name="rent" placeholder="e.g. Spotify">
-	</div>
-	<div class="question" id="question5">
-		<h3>What tone should it be?</h3>
-		<button>Serious</button>
-		<button>Passionate</button>
-		<button>Lighthearted</button>
-	</div>
-	<div class="question" id="question6">
+
+
+	<div class="question single" id="question6">
 		<h3>What are you requesting??</h3>
+		<div class="three">
 		<button>Media Kit</button>
 		<button>A time for a meeting</button>
 		<button>Just a response!</button>
+		</div>
 	</div>
-	<div class="question" id="question7">
+
+	<div class="question single" id="question7">
 		<h3>What are you interested in?</h3>
+		<div class="three">
 		<button>Advertising</button>
 		<button>Partnership</button>
 		<button>Not sure yet</button>
+		</div>
 	</div>
+
 	<div class="question" id="question8">
 		<button id="generatebutton">Write my post!</button>
 	</div>
+	<div class="answer">
+	</div>
+	<script src="js/emails.js"></script>
 </div>
 
 </body>
