@@ -18,10 +18,26 @@ $('#answers button').on('click',function(){
 	}
 });
 
+$('#question1 button').on('click',function(){
+  $('#answers').slideDown();
+  $('html, body').animate({scrollTop: '+=500px'}, 800);
+  $('.topsection').animate({height:'500'});
+  $('.desk').hide();
+  if ($(this).parents().hasClass('single')){
+    $(this).siblings().css('color','#FFC161');
+    $(this).siblings().css('background-color','white');
+    $(this).css('background-color','#C07E19'); 
+    $(this).css('color','white');   
+  } else {
+    $(this).css('background-color','#4288D6'); 
+    $(this).css('color','white'); 
+  }
+});
+
 var question_1;
 var answer_1;
 
-$('#answers #question1 button').on('click',function(){
+$('#question1 button').on('click',function(){
 	question_1 = $(this).text();
 	console.log(question_1)
 });

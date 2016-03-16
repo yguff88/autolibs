@@ -127,6 +127,9 @@ a:hover {
   width:40%;
 }
 
+.landing_images h2 {
+  font-style:italic;
+}
 .landing_image h3 {
   margin-left:50px;
   margin-right:50px;

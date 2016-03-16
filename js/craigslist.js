@@ -18,6 +18,22 @@ $('#answers button').on('click',function(){
 	}
 });
 
+$('#question1 button').on('click',function(){
+  $('#answers').slideDown();
+  $('html, body').animate({scrollTop: '+=500px'}, 800);
+  $('.topsection').animate({height:'500'});
+  $('.city').hide();
+    if ($(this).parents().hasClass('single')){
+    $(this).siblings().css('color','#C3BDFB');
+    $(this).siblings().css('background-color','white');
+    $(this).css('background-color','#694489'); 
+    $(this).css('color','white');   
+  } else {
+    $(this).css('background-color','#4288D6'); 
+    $(this).css('color','white'); 
+  }
+});
+
 var question_1;
 var answer_1;
 var random_1;
@@ -25,8 +41,9 @@ var random1Fun = [" I'm also selling my Beanie Baby collection - yes, I still ha
 var random1Serious = [" Please only email with serious inquiries and be prepared to provide proof of income immediately.", " Please link to your LinkedIn profile in any emails you send. Emails without a LinkedIn profile attached will be deleted."," Please provide phone number as well."];
 var random1Normal = [" This is a great place and I'm sad to be leaving, but I'll be happy knowing that someone else gets to enjoy it."," Please get in touch if you're interested. I'm happy to chat over email or on the phone."," I'm looking to find a subletter as quickly as possible, so please get in touch if interested!"];
 
-$('#answers #question1 button').on('click',function(){
+$('#question1 button').on('click',function(){
 	question_1 = $(this).text();
+  console.log(question_1);
 });
 
 var answer_2to5;
