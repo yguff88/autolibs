@@ -636,7 +636,7 @@ $('#generatebutton').on('click',function(){
 		ending_greeting = "Please shoot me an email if you're interested and we'll get back to you soon if it sounds like a good fit. Looking for housing sucks so let's make this as painless as possible!";
 	}
 
-	$('.answer').html(answer_1 + "<br>" + "<br>" + answer_2to5 + "<br>" + "<br>" + answer_5to6 + " " + answer_5to6followup + "<br>" + "<br>" + answer_7followup() + "<br>" + "We're looking for someone who is a good match for the current roommates." + answer_8followup + "<br>" + "<br>" + "A bit more info about the current roommates... " + answer_9followup() + "<br>" + "<br>" + answer_10intro + answer_10followup() + "<br>" + "<br>" + "A few things that we are NOT okay with are:" + answer_11followup() + "<br>" + "<br>" + answer_12followup + "<br>" + "<br>" + ending_greeting);
+	$('.answer').html("<h1>Voila! A custom Craigslist post, just for you...</h1>" + "<br>" + "<br>" + answer_1 + "<br>" + "<br>" + "<strong>The room: </strong>" +answer_2to5 + "<br>" + "<br>" + "<strong>The hood: </strong>" + answer_5to6 + " " + answer_5to6followup + "<br>" + "<br>" + "<strong> You: </strong>" + answer_7followup() + "We're looking for someone who is a good match for the current roommates." + answer_8followup + "<br>" + "<br>" + "<strong>The roomies/rules: </strong>" + "A bit more info about the current roommates... " + answer_9followup() + "<br>" + "<br>" + answer_10intro + answer_10followup() + "<br>" + "<br>" + "A few things that we are NOT okay with are:" + answer_11followup() + "<br>" + "<br>" + "<strong>Timing: </strong>" + answer_12followup + "<br>" + "<br>" + ending_greeting + "<br>" + "<br>");
 
 });
 

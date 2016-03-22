@@ -80,7 +80,7 @@ body{
 }
 
 #logo  { 
-  width:5.5%;
+  width:12%;
   margin-left:70px;
   margin-top:0px;
   padding:30px 0px 0px 0px;
@@ -273,8 +273,9 @@ button:hover{
   margin-top:50px;
   font-family:"Fira Sans";
   font-weight:300;
-  color:#4288D6;
+  color:#694489;
   font-size:18px;
+  padding:20px;
 }
 
 .three {
@@ -334,4 +335,5 @@ button:hover{
 input {
   color: #4288D6;
 }
+
 

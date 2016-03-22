@@ -83,7 +83,7 @@ body{
 }
 
 #logo { 
-  width:5.5%;
+  width:12%;
   margin-left:70px;
   margin-top:0px;
   padding:30px 0px 0px 0px;
@@ -306,6 +306,7 @@ button:hover{
   font-weight:300;
   color:#4288D6;
   font-size:18px;
+  padding-bottom:50px;
 }
 
 

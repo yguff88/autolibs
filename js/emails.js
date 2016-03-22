@@ -262,7 +262,7 @@ $('#generatebutton').on('click',function(){
 	answer_3 = $('#company').val();
 
 	if (question_1 === "Serious") {
-			answer_1 = "Dear " + answer_3 + " team.";
+			answer_1 = "Dear " + answer_3 + " team, ";
 		} else if (question_1 === "Passionate"){
 			answer_1 = "Hi " + answer_3 + " team,";
 		};

@@ -24,8 +24,11 @@ Developer @GA in NYC
 
 /* landing page */
 
+
+
 body {
   background-color:#B9D8FB;
+
 }
 
 #name {
@@ -67,8 +70,11 @@ body {
 }
 
 .logo img {
-  height:6%;
-  width:6%;
+  height:12%;
+  width:12%;
+  margin-left:18px;
+  margin-top:0px;
+  padding-top:14px;
 }
 
 a {
@@ -143,5 +149,38 @@ a:hover {
 #image2 {
   margin-right:50px;
 }
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+  .left {
+    display:none;
+  }
+  .right{
+    width:100%;
+  }
+  h2 {
+    font-size:12px;
+  }
+  .landing_body {
+  width:100%;
+  padding:none;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .left {
+    display:none;
+  }
+  .right{
+    width:100%;
+  }
+  h2 {
+    font-size:12px;
+  }
+  .landing_body {
+  width:100%;
+  padding:none;
+  }
+}
+
 
 
