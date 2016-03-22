@@ -8,12 +8,12 @@ $('.image1 img').on('click',function(){
 
 $('#answers button').on('click',function(){
 	if ($(this).parents().hasClass('single')){
-		$(this).siblings().css('color','#4288D6');
+		$(this).siblings().css('color','#694489');
 		$(this).siblings().css('background-color','white');
-		$(this).css('background-color','#4288D6'); 
+		$(this).css('background-color','#694489'); 
 		$(this).css('color','white'); 	
 	} else {
-		$(this).css('background-color','#4288D6'); 
+		$(this).css('background-color','#694489'); 
 		$(this).css('color','white'); 
 	}
 });
